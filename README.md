@@ -4,6 +4,9 @@
 
 a cool website created using threejs. user can upload the logos , images , textures and can also adjust color lo look how it will look on t-shirt. 
 
+## [Hosted Link] (https://eloquent-concha-e8843c.netlify.app/)
+## Screenshots 
+
 ## ![Project Screenshot](https://drive.google.com/uc?export=view&id=18WHDqFnx2lgl4EMMZmy0XTlvkpeKJzWC)
 
 
@@ -19,8 +22,7 @@ a cool website created using threejs. user can upload the logos , images , textu
 - [Contributing](#contributing)
 - [License](#license)
 
-## Screenshots 
-    ![Alt Text](https://drive.google.com/file/d/18WHDqFnx2lgl4EMMZmy0XTlvkpeKJzWC/view?usp=sharing)
+
 
 ## Project structure
 
