@@ -63,7 +63,7 @@ const Customizer = () => {
     } catch (error) {
       alert(error);
     } finally {
-      setGeneratingImg(false);
+      // setGeneratingImg(false);
       setActiveEditorTab("");
     }
   };
