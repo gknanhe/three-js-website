@@ -1,6 +1,8 @@
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, Center } from "@react-three/drei";
 
+import CanvasLoader from "../components/Loader";
 import Shirt from "./Shirt";
 import Backdrop from "./Backdrop";
 import CameraRig from "./CameraRig";
@@ -19,17 +21,19 @@ const CanvasModel = () => {
         eventPrefix="client"
         className="w-full h-full  transition-all ease-in"
       >
-        <ambientLight intensity={1.1} /> {/*2.9*/}
-        {/* //give texture to image */}
-        <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/potsdamer_platz_1k.hdr" />{" "}
-        {/* Give Model position and animation effects  */}
-        <CameraRig>
-          {/* Create a background shadows effect  */}
-          <Backdrop />
-          <Center>
-            <Shirt />
-          </Center>
-        </CameraRig>
+        <Suspense fallback={<CanvasLoader />}>
+          <ambientLight intensity={1.1} /> {/*2.9*/}
+          {/* //give texture to image */}
+          <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/potsdamer_platz_1k.hdr" />
+          {/* Give Model position and animation effects  */}
+          <CameraRig>
+            {/* Create a background shadows effect  */}
+            <Backdrop />
+            <Center>
+              <Shirt />
+            </Center>
+          </CameraRig>
+        </Suspense>
       </Canvas>
     </div>
   );
