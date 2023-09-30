@@ -37,7 +37,6 @@ const CanvasLoader = () => {
       as="div"
       center
       style={{
-        marginTop: 50,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
